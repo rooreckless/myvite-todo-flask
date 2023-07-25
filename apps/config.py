@@ -19,7 +19,7 @@ class LocalConfig(BaseConfig):
   # print("mysql_password",mysql_password)
   # print("mysql_database=",mysql_database)
   # print("mysql_database=",mysql_database)
-  SQLALCHEMY_DATABASE_URI = 'mariadb+pymysql://'+mysql_user+':'+mysql_password+'@db-server/'+mysql_database
+  SQLALCHEMY_DATABASE_URI = 'mariadb+pymysql://'+mysql_user+':'+mysql_password+'@'+mysql_endpoint+'/'+mysql_database
   
   SQLALCHEMY_TRACK_MODIFICATIONS=False
   SQLALCHEMY_ECHO = True
