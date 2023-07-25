@@ -25,10 +25,10 @@ class BaseConfig:
 #開発段階のconfig(BaseConfigを継承)
 class LocalConfig(BaseConfig):
   print("--LocalConfig---")
-  SQLALCHEMY_DATABASE_URI = 'mariadb+pymysql://'+mysql_user+':'+mysql_password+'@'+mysql_endpoint+'/'+mysql_database
+  # SQLALCHEMY_DATABASE_URI = 'mariadb+pymysql://'+mysql_user+':'+mysql_password+'@'+mysql_endpoint+'/'+mysql_database
   
-  SQLALCHEMY_TRACK_MODIFICATIONS=False
-  SQLALCHEMY_ECHO = True
+  # SQLALCHEMY_TRACK_MODIFICATIONS=False
+  # SQLALCHEMY_ECHO = True
   
 #本番用のconfig(BaseConfigを継承)
 #テスト用段階だったらCSRF対策を無効にするため「WTF_CSRF_ENABLED = False」にしたりも
