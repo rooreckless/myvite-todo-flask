@@ -24,10 +24,7 @@ class BaseConfig:
   JSON_AS_ASCII=False
 #開発段階のconfig(BaseConfigを継承)
 class LocalConfig(BaseConfig):
-  print("mysql_user=",mysql_user)
-  print("mysql_password",mysql_password)
-  print("mysql_database=",mysql_database)
-  print("mysql_endpoint=",mysql_endpoint)
+  print("--LocalConfig---")
   SQLALCHEMY_DATABASE_URI = 'mariadb+pymysql://'+mysql_user+':'+mysql_password+'@'+mysql_endpoint+'/'+mysql_database
   
   SQLALCHEMY_TRACK_MODIFICATIONS=False
@@ -36,6 +33,7 @@ class LocalConfig(BaseConfig):
 #本番用のconfig(BaseConfigを継承)
 #テスト用段階だったらCSRF対策を無効にするため「WTF_CSRF_ENABLED = False」にしたりも
 class ProdConfig(BaseConfig):
+  print("-=-=-ProdConfig-=-=-")
   SQLALCHEMY_DATABASE_URI = 'mariadb+pymysql://'+mysql_user+':'+mysql_password+'@'+mysql_endpoint+'/'+mysql_database
   # SQLALCHEMY_DATABASE_URI=f"sqlite:///{basedir/'testing.sqlite'}"
   SQLALCHEMY_TRACK_MODIFICATIONS=False

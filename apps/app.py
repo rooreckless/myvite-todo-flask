@@ -15,6 +15,7 @@ from apps.back_app import views
 def create_app(config_key):
   app=Flask(__name__)
   app.register_blueprint(views.back_app,url_prefix="/back_app")
+  print("create_app----config_key=",config_key)
   app.config.from_object(config[config_key])
   #SQLAlchemyとアプリを連携する初期化
   db.init_app(app)
