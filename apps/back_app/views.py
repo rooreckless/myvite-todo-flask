@@ -21,7 +21,6 @@ def alltask():
   todos=db.session.query(Todo).all()
   todos_list=todos_list_to_dict(todos)
   #辞書をjsonifyにいれる
-  print("/alltask")
   return jsonify({"flask-- @back_app.route(/alltask)":"is finished","todos_list":todos_list})
 #todoオブジェクトを要素とするリストをリスト・辞書に変形
 def todos_list_to_dict(todos):
