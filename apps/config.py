@@ -1,16 +1,12 @@
 #back_app/apps/config.py
 import os
 from pathlib import Path
-# basedir=Path(__file__).parent.parent
+basedir=Path(__file__).parent.parent
 
 from dotenv import load_dotenv
 
 print("Path(__file__).parent.parent=",Path(__file__).parent.parent)
-print("os.path.dirname(__file__)=",os.path.dirname(__file__))
-print("os.path.dirname(__file__).parent=",os.path.dirname(__file__).parent)
-print("os.path.dirname(__file__).parent.parent=",os.path.dirname(__file__).parent.parent)
-dotenv_path = os.path.join(os.path.dirname(__file__).parent.parent, '.env')
-print("os.path.dirname(__file__).parent.parent=",os.path.dirname(__file__).parent.parent)
+dotenv_path = os.path.join(basedir, '.env')
 print("dotenv_path=",dotenv_path)
 load_dotenv(dotenv_path)
 
