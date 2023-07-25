@@ -27,7 +27,8 @@ class LocalConfig(BaseConfig):
 #本番用のconfig(BaseConfigを継承)
 #テスト用段階だったらCSRF対策を無効にするため「WTF_CSRF_ENABLED = False」にしたりも
 class ProdConfig(BaseConfig):
-  SQLALCHEMY_DATABASE_URI=f"sqlite:///{basedir/'testing.sqlite'}"
+  SQLALCHEMY_DATABASE_URI = 'mariadb+pymysql://'+mysql_user+':'+mysql_password+'@'+mysql_endpoint+'/'+mysql_database
+  # SQLALCHEMY_DATABASE_URI=f"sqlite:///{basedir/'testing.sqlite'}"
   SQLALCHEMY_TRACK_MODIFICATIONS=False
   SQLALCHEMY_ECHO = True
 #辞書の中身は上のクラスを値にもつ キーが指定されたら、対応する設定値になる
