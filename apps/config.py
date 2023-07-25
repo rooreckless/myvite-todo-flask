@@ -6,7 +6,7 @@ from pathlib import Path
 from dotenv import load_dotenv
 
 
-dotenv_path = join(dirname(__file__).parent.parent, '.env')
+dotenv_path = os.path.join(os.path.dirname(__file__).parent.parent, '.env')
 load_dotenv(dotenv_path)
 
 
