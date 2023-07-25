@@ -5,6 +5,7 @@ from pathlib import Path
 
 from dotenv import load_dotenv
 
+print("Path(__file__).parent.parent=",Path(__file__).parent.parent)
 print("os.path.dirname(__file__)=",os.path.dirname(__file__))
 print("os.path.dirname(__file__).parent=",os.path.dirname(__file__).parent)
 print("os.path.dirname(__file__).parent.parent=",os.path.dirname(__file__).parent.parent)
