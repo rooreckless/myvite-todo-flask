@@ -7,6 +7,8 @@ from dotenv import load_dotenv
 
 
 dotenv_path = os.path.join(os.path.dirname(__file__).parent.parent, '.env')
+print("os.path.dirname(__file__).parent.parent=",os.path.dirname(__file__).parent.parent)
+print("dotenv_path=",dotenv_path)
 load_dotenv(dotenv_path)
 
 
