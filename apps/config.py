@@ -1,13 +1,22 @@
 #back_app/apps/config.py
 import os
+from pathlib import Path
+# basedir=Path(__file__).parent.parent
+
+from dotenv import load_dotenv
+
+
+dotenv_path = join(dirname(__file__).parent.parent, '.env')
+load_dotenv(dotenv_path)
+
+
 mysql_root_password=os.getenv("MYSQL_ROOT_PASSWORD")
 mysql_user=os.getenv("MYSQL_USER")
 mysql_password=os.getenv("MYSQL_PASSWORD")
 mysql_database=os.getenv("MYSQL_DATABASE")
 mysql_endpoint=os.getenv("MYSQL_ENDPOINT")
 secret_key=os.getenv("SECRET_KEY")
-from pathlib import Path
-basedir=Path(__file__).parent.parent
+
 
 #各段階のconfigの基礎となる部分
 class BaseConfig:
