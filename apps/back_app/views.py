@@ -52,8 +52,6 @@ def deletetask(taskid):
   db.session.commit()
   db.session.close()
   print("---DELETED_task"+taskid+"---")
-  ## POSTの終わりはユーザー一覧画面へリダイレクト
-  #return redirect(url_for("back_app.alltask"))
   return jsonify({"flask-- @back_app.route(/delete/"+taskid+")":"is finished"})
 #todo新規作成用ルート
 @back_app.route("/createtask",methods=["POST"],endpoint="createtask")

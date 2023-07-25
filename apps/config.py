@@ -24,7 +24,6 @@ class BaseConfig:
   JSON_AS_ASCII=False
 #開発段階のconfig(BaseConfigを継承)
 class LocalConfig(BaseConfig):
-  print("--LocalConfig---")
   # SQLALCHEMY_DATABASE_URI = 'mariadb+pymysql://'+mysql_user+':'+mysql_password+'@'+mysql_endpoint+'/'+mysql_database
   
   # SQLALCHEMY_TRACK_MODIFICATIONS=False
@@ -33,11 +32,9 @@ class LocalConfig(BaseConfig):
 #本番用のconfig(BaseConfigを継承)
 #テスト用段階だったらCSRF対策を無効にするため「WTF_CSRF_ENABLED = False」にしたりも
 class ProdConfig(BaseConfig):
-  print("-=-=-ProdConfig-=-=-")
   SQLALCHEMY_DATABASE_URI = 'mariadb+pymysql://'+mysql_user+':'+mysql_password+'@'+mysql_endpoint+'/'+mysql_database
   # SQLALCHEMY_DATABASE_URI=f"sqlite:///{basedir/'testing.sqlite'}"
   SQLALCHEMY_TRACK_MODIFICATIONS=False
   SQLALCHEMY_ECHO = True
 #辞書の中身は上のクラスを値にもつ キーが指定されたら、対応する設定値になる
-# config={"testing":TestingConfig,"local":LocalConfig}
 config={"local":LocalConfig,"product":ProdConfig}
