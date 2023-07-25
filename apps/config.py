@@ -1,13 +1,12 @@
 #back_app/apps/config.py
 import os
+
+#.envファイルからdotenvを使い環境変数として読み込む
 from pathlib import Path
+#このファイルの親の親ディレクトリを指定(←その中に.envがあるから)
 basedir=Path(__file__).parent.parent
-
 from dotenv import load_dotenv
-
-print("Path(__file__).parent.parent=",Path(__file__).parent.parent)
 dotenv_path = os.path.join(basedir, '.env')
-print("dotenv_path=",dotenv_path)
 load_dotenv(dotenv_path)
 
 
