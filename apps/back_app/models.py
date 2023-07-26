@@ -1,4 +1,3 @@
-#crud_app/apps/crud/models.py
 #下のimportしたdbはapp.pyで作成した変数でflask_alchemyオブジェクト
 # from apps.app import db , login_manager
 from apps.app import db

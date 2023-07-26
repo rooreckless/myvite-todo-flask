@@ -1,4 +1,3 @@
-#09uwsgi_plus08/flask/crud_app/gunicorn_conf.py
 #---------
 #もしこのgunicorn_conf.pyを移動させたなら、appsディレクトリがあるところまでcdを移動させるため
 #chdirを設定してください
