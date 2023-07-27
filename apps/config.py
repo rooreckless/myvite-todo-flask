@@ -36,7 +36,7 @@ class ProdConfig(BaseConfig):
   basedir=Path(__file__).parent.parent
   dotenv_path = os.path.join(basedir, '.env')
   load_dotenv(dotenv_path)
-
+  print("dotenv_path=",dotenv_path)
 
   mysql_root_password=os.getenv("MYSQL_ROOT_PASSWORD")
   mysql_user=os.getenv("MYSQL_USER")
