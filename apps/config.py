@@ -19,7 +19,7 @@ class LocalConfig(BaseConfig):
   mysql_user=os.getenv("MYSQL_USER")
   mysql_password=os.getenv("MYSQL_PASSWORD")
   mysql_database=os.getenv("MYSQL_DATABASE")
-  mysql_endpoint=os.getenv("MYSQL_ENDPOINT")
+  mysql_endpoint=os.getenv("MYSQL_DEVENDPOINT")
   secret_key=os.getenv("SECRET_KEY")
   
   print("--LocalConfig---")
