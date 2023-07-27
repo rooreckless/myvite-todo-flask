@@ -44,8 +44,8 @@ class ProdConfig(BaseConfig):
   mysql_database=os.getenv("MYSQL_DATABASE")
   mysql_endpoint=os.getenv("MYSQL_ENDPOINT")
   secret_key=os.getenv("SECRET_KEY")
-  
-  # print("-=-=-ProdConfig-=-=-")
+  print("mysql_endpoint=",mysql_endpoint)
+  print("-=-=-ProdConfig-=-=-")
   SQLALCHEMY_DATABASE_URI = 'mariadb+pymysql://'+mysql_user+':'+mysql_password+'@'+mysql_endpoint+'/'+mysql_database
   # SQLALCHEMY_DATABASE_URI=f"sqlite:///{basedir/'testing.sqlite'}"
   SQLALCHEMY_TRACK_MODIFICATIONS=False
