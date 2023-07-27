@@ -17,6 +17,7 @@ def create_app(config_key):
   app.register_blueprint(views.back_app,url_prefix="/back_app")
   print("create_app----config_key=",config_key)
   app.config.from_object(config[config_key])
+  print("app.config=",app.config)
   #SQLAlchemyとアプリを連携する初期化
   db.init_app(app)
   # #Migrateインスタンス作成 appとdbを入れて連携させる
