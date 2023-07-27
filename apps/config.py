@@ -10,7 +10,7 @@ class BaseConfig:
   JSON_AS_ASCII=False
 #開発段階のconfig(BaseConfigを継承)
 class LocalConfig(BaseConfig):
-  #このファイルの親の親ディレクトリを指定(←その中に.envがあるから)
+  #このファイルの親の親ディレクトリを指定(←その中にdev.envがあるから)
   basedir=Path(__file__).parent.parent
   dotenv_path = os.path.join(basedir, 'dev.env')
   load_dotenv(dotenv_path)
