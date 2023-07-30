@@ -19,7 +19,7 @@ def create_app(config_key):
   # app.config.from_object(config[config_key])
   if config_key=="product":
     print("create_app----config_key=",config_key)
-    app.config.from_pyfile("../.eenv.py")
+    app.config.from_pyfile("../.env.py")
   elif config_key=="local":
     print("create_app----config_key=",config_key)
     app.config.from_pyfile("../dev.env.py")
